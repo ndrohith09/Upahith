@@ -17,10 +17,14 @@ Our main goal was to create a better envisioned person in order to overcome the 
 
 ## What it does
 **Pronunciation :** Pronouncing the words appearing on the screen and analyzing the pronounced words to assign scores. Defining scores based on the word pronunciation analyzed after speech to text. Enter some text in the field provided and click on speak button to know its pronounciations.
+![Screenshot from 2022-09-04 11-44-07](https://user-images.githubusercontent.com/73429989/188300359-73080692-e963-4bb0-b682-32ff8e8e0b4c.png) 
+![Screenshot from 2022-09-04 11-44-17](https://user-images.githubusercontent.com/73429989/188300389-ccfa5f89-88a9-4217-8ea2-d3365805910a.png)
 
 **Learn with Image :** Input the text & encode it with the pre-trained DistilBERT base model. Resnet-50 model is used to encode the images. Find the best matches and display the images. This helps to visualize the text. 
+![Screenshot from 2022-09-04 11-43-06](https://user-images.githubusercontent.com/73429989/188300298-fb70766d-758a-4da0-9249-d451ffd68f98.png) 
 
 **Paint to Image :** Paint the sketch in canvas provided there and click generate image . Realistic image of your sketch is generated . Output the accuracy match.
+![Screenshot from 2022-09-04 11-43-38](https://user-images.githubusercontent.com/73429989/188300324-de1e3e18-0755-4224-aebc-ccc7964e3748.png) 
 
 ## How we built it
 - To improve their pronunciation we used javascript and assembly api to work on with speech to text parts.
@@ -57,5 +61,5 @@ Our main goal was to create a better envisioned person in order to overcome the 
 - By incorporating regional languages, they can enhance their pronunciation skills across a range of languages. 
 
 ## User
-Target user  : Parents
-End  user : Kids 
+- Target user  : Parents 
+- End  user : Kids 
