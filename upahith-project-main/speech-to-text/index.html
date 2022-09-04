@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Start your development with LeadMark landing page.">
+        <meta name="author" content="Upahith team">
+        <title>Upahith</title>
+        <!--Font awesome-->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- font icons -->
+        <link rel="stylesheet" href="./assets/vendors/themify-icons/css/themify-icons.css">
+        <!-- Bootstrap + LeadMark main styles -->
+        <link rel="stylesheet" href="./assets/css/leadmark.css">
+        <link rel="stylesheet" href="./style.css">
+        
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+        <!-- page Navigation -->
+        <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="./assets/images/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Text to Image</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Paint to Image</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Speech to text</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#get-started" class="ml-4 nav-link btn btn-primary btn-sm rounded">Get Started</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Of Second Navigation -->
+
+        <!-- Page Header -->
+        <header class="header">
+            <div class="overlay">
+                <h1 style="text-align:center;padding: 12px;" class="title">Speech to Text</h1>
+                
+            </div>
+            <div class="shape">
+                <svg viewBox="0 0 1500 200">
+                    <path
+                        d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z" />
+                </svg>
+            </div>
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+        </header>
+        <!-- End Of Page Header -->
+
+        
+        <div class="voice_to_text">
+            <br />
+            <p id="demo"></p>
+            <div class="container" style="
+                            display:flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 10px;
+                            margin: 15px;">
+                <button id="click_to_start" class="btn btn-primary">new word</button>
+        
+                <input name="text" id="convert_text" placeholder="Text" class="form-control" style="margin:18px;">
+                <button id="click_to_record" class="btn btn-secondary">Voice To Text</button>
+            </div>
+        
+        </div> 
+
+        <div class="predictions-section">
+            <div id="predictions">
+                <h3 id="score"></h3>
+                <h3 id="predicted"></h3>
+            </div>
+        </div>
+        
+        <div class="speak-sec">
+            <div class="container" style="margin:12px;">
+                <button class="btn btn-primary shadow ms-2" type="submit" onclick="speak()" id="speak-btn">
+                    Speak
+                </button>
+            </div>
+        
+        </div>
+        
+       
+        
+        
+        <script type="text/javascript" src="script.js"></script>
+        <script>
+            function speak() {
+                console.log("speak");
+                // text = document.getElementById("demo").innerText;
+                text = document.getElementById("convert_text").value;
+                console.log(text);
+                "speechSynthesis" in window
+                    ? console.log("Web Speech API supported!")
+                    : console.log("Web Speech API not supported :-(");
+                const synth = window.speechSynthesis;
+                const utterThis = new SpeechSynthesisUtterance(text);
+                synth.speak(utterThis);
+            }
+        </script>
+
+
+        
+        <!--Footer end-->
+        <!-- core  -->
+        <script src="./assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="./assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+        <!-- bootstrap 3 affix -->
+        <script src="./assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+        <!-- Isotope -->
+        <script src="./assets/vendors/isotope/isotope.pkgd.js"></script>
+
+        <!-- LeadMark js -->
+        <script src="./assets/js/leadmark.js"></script>
+
+        <script src="./script.js"></script>
+
+    </body>
+
+</html>

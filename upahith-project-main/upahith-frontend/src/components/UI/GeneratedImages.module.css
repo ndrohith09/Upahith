@@ -1,0 +1,14 @@
+.generated-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.generatedImage {
+    width: 220px;
+    height: 220px;
+    margin: 8px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
